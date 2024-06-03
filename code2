@@ -1,0 +1,13 @@
+// Example of using Processing library to create interactive art
+void setup() {
+  size(800, 600);
+  background(0);
+  fill(255);
+  textSize(32);
+  textAlign(CENTER, CENTER);
+  text("Artificial Artistry", width/2, height/2);
+}
+
+void draw() {
+  // Add animation or additional art elements here
+}
