@@ -1,0 +1,29 @@
+// Example of generating artistic image in Java
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+public class ArtGenerator {
+    public static void main(String[] args) {
+        int width = 800;
+        int height = 600;
+        BufferedImage image = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+        Graphics2D g2d = image.createGraphics();
+
+        // Generating artistic image
+        g2d.setColor(Color.BLACK);
+        g2d.fillRect(0, 0, width, height);
+        g2d.setColor(Color.WHITE);
+        g2d.drawString("Artificial Artistry", 300, 300);
+        g2d.dispose();
+
+        try {
+            File output = new File("art.png");
+            ImageIO.write(image, "png", output);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
